@@ -15,6 +15,9 @@ COPY . .
 # Create necessary directories
 RUN mkdir -p data logs screenshots ui
 
+# Copy version file (forces cache rebuild)
+COPY VERSION /app/VERSION/
+
 # Expose port
 EXPOSE 18789
 
